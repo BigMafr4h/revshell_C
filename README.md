@@ -11,12 +11,13 @@ Diferentemente de um SO como Unix/POSIX, que são sistemas fáceis de criar payl
 No windows a coisa é mais embaixo, o erro comum para quem cria no Unix é que não se pode usar diretamente um SOCKET como HANDLE no Windows. São tipos diferentes e o CreateProcess não aceita sockets diretamente para redirecionamento. O Windows requer pipes nomeados ou anônimos para redirecionar I/O entre processos.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O incrivel do Unix/Posix em simplesmente usar funções como o dup2() como tudo é file descriptor(Socket, arquivo, pipe, terminal - todos usam a mesma interface) 
+O incrivel do Unix/Posix em simplesmente usar funções como o dup2() como tudo é file descriptor(Socket, arquivo, pipe, terminal - todos usam a mesma interface).
+
 **Unix/POSIX**:
 
-Simplicidade: Menos código, mais expressivo.
-Composição: Programas pequenos que fazem uma coisa bem.
-Transparência: File descriptors são apenas números.
+-Simplicidade: Menos código, mais expressivo. 
+-Composição: Programas pequenos que fazem uma coisa bem.
+-Transparência: File descriptors são apenas números.
 
                                                               fork() copia tudo: memória, file descriptors, variáveis de ambiente
                                                               exec() substitui tudo exceto: file descriptors abertos
@@ -25,10 +26,10 @@ Transparência: File descriptors são apenas números.
 
 **Windows**:
 
-Segurança: Controle de acesso por handle.
-Robustez: Processos isolados por padrão.
-Controle: API rica para manipulação de processos.
-Compatibilidade: Backward compatibility é sagrada.
+-Segurança: Controle de acesso por handle.
+-Robustez: Processos isolados por padrão.
+-Controle: API rica para manipulação de processos.
+-Compatibilidade: Backward compatibility é sagrada.
 
                                                               CreateProcess() cria processo vazio,
                                                               Só herda o que for explicitamente permitido
